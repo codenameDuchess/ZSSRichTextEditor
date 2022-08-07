@@ -224,7 +224,13 @@ ZSSRichTextEditor has the following functions:
 
 Installation
 --------------
-You can use `CocoaPods` or manually using the following instructions:
+You can use `CocoaPods` for this fork with the following instructions (until [this issue](https://github.com/nnhubbard/ZSSRichTextEditor/issues/267) is resolved):
+
+1. Add the dependency for this fork to your podfile:
+    pod 'ZSSRichTextEditor', :git => 'https://github.com/codenameDuchess/ZSSRichTextEditor.git'
+2. Run `pod install`
+
+Or manually install with the following instructions from the parent repo:
 
 `ZSSRichTextEditor` requires iOS7 as well as `CoreGraphics.framework` and `CoreText.framework`.
 
