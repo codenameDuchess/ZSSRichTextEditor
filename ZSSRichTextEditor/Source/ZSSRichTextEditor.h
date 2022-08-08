@@ -63,7 +63,10 @@ static NSString * const ZSSEditorContent = @"document.activeElement.id=='zss_edi
  */
 @interface ZSSRichTextEditor : UIViewController <WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler, HRColorPickerViewControllerDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,ZSSFontsViewControllerDelegate>
 
-
+/*
+ *  WKWebView for writing/editing/displaying the content
+ */
+@property (nonatomic, strong) WKWebView *editorView;
 /**
  *  The base URL to use for the webView
  */
@@ -232,5 +235,13 @@ static NSString * const ZSSEditorContent = @"document.activeElement.id=='zss_edi
  *  Set custom css
  */
 - (void)setCSS:(NSString *)css;
+
+/*
+ *  Allow override of WKNavigationDelegate and WKScriptMessageHandler function calls
+ *  Calling super is required
+ */
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation;
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler;
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message;
 
 @end
