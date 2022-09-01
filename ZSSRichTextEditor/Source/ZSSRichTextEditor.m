@@ -321,7 +321,7 @@ static CGFloat kDefaultScale = 0.5;
     [super viewWillAppear:animated];
     
     //Add observers for keyboard showing or hiding notifications
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowOrHide:) name:UIKeyboardWillChangeFrameNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowOrHide:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
 #pragma mark - View Will Disappear Section
@@ -330,7 +330,7 @@ static CGFloat kDefaultScale = 0.5;
     [super viewWillDisappear:animated];
     
     //Remove observers for keyboard showing or hiding notifications
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
     
 }
 
