@@ -98,11 +98,6 @@ static Class hackishFixClass = Nil;
 @property (nonatomic, strong) UIToolbar *toolbar;
 
 /*
- *  Holder for all of the toolbar components
- */
-@property (nonatomic, strong) UIView *toolbarHolder;
-
-/*
  *  String for the HTML
  */
 @property (nonatomic, strong) NSString *htmlString;

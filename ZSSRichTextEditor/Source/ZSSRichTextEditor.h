@@ -237,6 +237,11 @@ static NSString * const ZSSEditorContent = @"document.activeElement.id=='zss_edi
 - (void)setCSS:(NSString *)css;
 
 /*
+ *  Holder for all of the toolbar components
+ */
+@property (nonatomic, strong) UIView *toolbarHolder;
+
+/*
  *  Allow override of WKNavigationDelegate and WKScriptMessageHandler function calls
  *  Calling super is required
  */
